@@ -17,6 +17,7 @@ const buttons = document.querySelectorAll('.button:not(.clear, .equals, .plus, .
 buttons.forEach(button =>{
     button.addEventListener('click', ()=>{
         display.innerHTML+=button.getAttribute('data')
+        display.textContent > 11 ? display.innerHTML = display.textContent.substring(0,11) : null
       
     })
 })
@@ -25,6 +26,7 @@ equals.addEventListener('click', ()=>{
     console.log(display.textContent)
     try{
     display.innerHTML = `${eval(display.textContent)}`
+    display.textContent > 11 ? display.innerHTML = display.textContent.substring(0,11) : null
     } catch(e){display.innerHTML=`WTF!?`}
 })
 
@@ -33,3 +35,4 @@ equals.addEventListener('click', ()=>{
 clear.addEventListener('click', ()=>{
     display.innerHTML = ''
 })
+
