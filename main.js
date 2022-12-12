@@ -16,17 +16,16 @@ const buttons = document.querySelectorAll('.button:not(.clear, .equals, .plus, .
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
-        display.innerHTML += button.getAttribute('data')
-        display.textContent > 11 ? display.innerHTML = display.textContent.substring(0, 11) : null
-
+        display.innerHTML += button.getAttribute('data').substring(0,11)
+        display.textContent > 10 ? display.innerHTML = display.textContent.substring(0, 10) : null
     })
 })
 
 equals.addEventListener('click', () => {
     console.log(display.textContent)
     try {
-        display.innerHTML = `${eval(display.textContent)}`
-        display.textContent > 11 ? display.innerHTML = display.textContent.substring(0, 11) : null
+        display.innerHTML = `${eval(display.textContent)}`.substring(0,11)
+        
     } catch (e) { display.innerHTML = `WTF!?` }
 })
 
