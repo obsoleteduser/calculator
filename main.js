@@ -37,7 +37,7 @@ equals.addEventListener('click', ()=>{
     console.log(display.textContent)
     try{
     display.innerHTML += `=${eval(display.textContent)}`
-    } catch(e){display.innerHTML=`WTF?`}
+    } catch(e){display.innerHTML=`WTF!?`}
 })
 
 
