@@ -11,6 +11,8 @@
     user-select: none;
 }
 
+
+
 body{
     display: flex;
     width: 100vw;
@@ -37,9 +39,10 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 1rem;
     background-color: palegreen;
+    overflow: hidden;
 
 }
 
